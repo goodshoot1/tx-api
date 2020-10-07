@@ -880,38 +880,7 @@ router.get('/api/menu', ((req, res, next) => {
                     }],
                     "subMenus": []
                 }]
-            }, {
-                "id": 419290,
-                "parentId": 0,
-                "parentName": "真人视讯",
-                "menuNameCn": "OG视讯",
-                "menuNameEn": "OG",
-                "gameId": "0",
-                "gameCode": "OG",
-                "url": "live",
-                "menuType": "2",
-                "viewType": "99",
-                "hot": 0,
-                "sortNo": 2,
-                "hover": "3",
-                "template": "180",
-                "remark": "感受刺激 体验心跳",
-                "hasSub": false,
-                "totalSub": 0,
-                "imgs": [{
-                    "id": 960005,
-                    "name": "OG视讯",
-                    "img": "https://gamelist.mobanwang.com.cn//menuList/YHHB/0/live/og.png",
-                    "href": "https://gamelist.mobanwang.com.cn//menuList/YHHB/0/live/og.png"
-                }],
-                "icons": [{
-                    "id": 962219,
-                    "name": "OG视讯",
-                    "img": "https://gamelist.mobanwang.com.cn//menuList/YHHB/0/live/og_logo.png",
-                    "href": "https://gamelist.mobanwang.com.cn//menuList/YHHB/0/live/og_logo.png"
-                }],
-                "subMenus": []
-            }, {
+            },  {
                 "id": 419252,
                 "parentId": 0,
                 "parentName": "顶级菜单",
