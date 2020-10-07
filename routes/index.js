@@ -6,7 +6,7 @@ router.get('/', function (req, res, next) {
     res.render('index', {title: 'Express'});
 });
 
-router.get('/menu', ((req, res, next) => {
+router.get('/api/menu', ((req, res, next) => {
 
     console.log('req', req, 'res', res, 'next', next);
 
@@ -3910,7 +3910,7 @@ router.get('/menu', ((req, res, next) => {
 }))
 
 
-router.get('/config', ((req, res) => {
+router.get('/api/config', ((req, res) => {
     res.send(
         {
             "status": 10000,
