@@ -880,7 +880,7 @@ router.get('/api/menu', ((req, res, next) => {
                     }],
                     "subMenus": []
                 }]
-            },  {
+            }, {
                 "id": 419252,
                 "parentId": 0,
                 "parentName": "顶级菜单",
@@ -3888,61 +3888,272 @@ router.get('/api/config', ((req, res) => {
                 "type": "1",
                 "typeName": "轮播图",
                 "configs": [{
-                    "title": "轮播一",
-                    "name": "pc_01_01",
-                    "weight": 0,
-                    "data": "https://line.txwl-888.com/group1/M00/00/4F/ZxcuGF6eerCAZnJ7AAXL9SN75LY207.jpg"
+                    "title": "usdt入款",
+                    "name": "usdt入款",
+                    "weight": 1,
+                    "data": "https://line.jzs001.cn/group1/M00/00/B5/ZxcuGF9BD3mARy2nAAQL_fuJ5U4150.jpg"
                 }, {
-                    "title": "轮播二",
-                    "name": "pc_01_02",
+                    "title": "红包派送",
+                    "name": "红包派送",
                     "weight": 0,
-                    "data": "https://line.txwl-888.com/group1/M00/00/4F/ZxcuGF6eerCAHzxEAAH4HlivRBE011.jpg"
+                    "data": "https://line.jzs001.cn/group1/M00/00/73/Z_QBx179TDuAM6npAAHcApMrMR4917.jpg"
                 }, {
-                    "title": "轮播三",
-                    "name": "pc_01_03",
+                    "title": "新人成就奖",
+                    "name": "新人成就奖",
                     "weight": 0,
-                    "data": "https://line.txwl-888.com/group1/M00/00/4C/DsBDFV6eerCAFlakAAJhXL5kn_g366.jpg"
+                    "data": "https://line.jzs001.cn/group1/M00/00/84/ZxcuGF79TDyAZnNIAAHo8JLJhp0229.jpg"
+                }, {
+                    "title": "全新代理模式",
+                    "name": "全新代理模式",
+                    "weight": 0,
+                    "data": "https://line.jzs001.cn/group1/M00/00/7F/DsBDFV79TDyAYbeoAALdvrn3iaY167.jpg"
                 }]
             }, {
                 "type": "4",
                 "typeName": "优惠轮播图",
                 "configs": [{
-                    "title": "新人礼包一",
-                    "name": "ct_01",
-                    "weight": 0,
-                    "data": "https://line.txwl-888.com/group1/M00/00/4F/ZxcuGF6ee7uAB8jtAAKA7VtpvZE946.png",
-                    "smallImg": "https://line.txwl-888.com/group1/M00/00/45/Z_QBx16ee7yACm_iAAdyImlUzSg831.png",
-                    "htmlImg": "https://line.txwl-888.com/group1/M00/00/4C/DsBDFV6eezyAdcLxAAcLBcBLGOg286.jpg",
-                    "bigImg": "https://line.txwl-888.com/group1/M00/00/45/Z_QBx16eezuAZgCPAAVL8D3THl8263.png"
+                    "title": "usdt老银河pc细",
+                    "name": "usdt入款",
+                    "weight": 1,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/AF/DsBDFV9DUPmABUhFAAsMUhSL9MY244.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/E3/ZxcuGF91ePWARujVAAMZppxTKyk717.jpg"
                 }, {
-                    "title": "新人礼包二",
-                    "name": "ct_02",
+                    "title": "优惠6",
+                    "name": "",
                     "weight": 0,
-                    "data": "https://line.txwl-888.com/group1/M00/00/4F/ZxcuGF6ee7uAVLqgAAKWIF1PyM8745.png",
-                    "smallImg": "https://line.txwl-888.com/group1/M00/00/4F/ZxcuGF6ee7yAVXy7AAYGkJym1iM319.png",
-                    "htmlImg": "https://line.txwl-888.com/group1/M00/00/4C/DsBDFV6eezyAfuVnAAdTHeA8i2U000.jpg",
-                    "bigImg": "https://line.txwl-888.com/group1/M00/00/45/Z_QBx16eezuAPjGzAAUth-WPieU020.png"
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/C0/Z_QBx190Nz6AXvNVAAy0cWXxXjs331.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/E2/ZxcuGF90VBmAPKGBAAMlhUopfSg546.jpg"
                 }, {
-                    "title": "云闪付",
-                    "name": "ct_03",
+                    "title": "优惠8",
+                    "name": "",
                     "weight": 0,
-                    "data": "https://line.txwl-888.com/group1/M00/00/4C/DsBDFV6ee7uAUTStAAKhqDMnHIo314.png",
-                    "smallImg": "https://line.txwl-888.com/group1/M00/00/4C/DsBDFV6ee72AAthxAAbGgnATlYk142.png",
-                    "htmlImg": "https://line.txwl-888.com/group1/M00/00/45/Z_QBx16eezyAKhXuAAYs8YsTgA4798.jpg",
-                    "bigImg": "https://line.txwl-888.com/group1/M00/00/4F/ZxcuGF6eezuAE7oNAAPZvJcHXGk112.png"
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/80/DsBDFV79ibqAJ1-qAAMVmXx_MVo689.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/D9/DsBDFV90VGOACDITAAM-OFW2ViU350.jpg"
                 }, {
-                    "title": "电子狂欢",
-                    "name": "ct_04",
+                    "title": "优惠9",
+                    "name": "",
                     "weight": 0,
-                    "data": "https://line.txwl-888.com/group1/M00/00/50/ZxcuGF6hGtqAa0KYAAKMw6k6Pcc490.png",
-                    "smallImg": "https://line.txwl-888.com/group1/M00/00/46/Z_QBx16hGtqAQa7kAAYMJRQTgoM266.png",
-                    "htmlImg": "https://line.txwl-888.com/group1/M00/00/46/Z_QBx16hGtOAWjupAAR0NedGNDs451.jpg",
-                    "bigImg": "https://line.txwl-888.com/group1/M00/00/50/ZxcuGF6hGtOAHZZbAAEg0EWe1DI104.png"
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/84/ZxcuGF79ibqAO3McAAUZYgoOtcE904.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/C0/Z_QBx190VGSANDWXAANMiVYbsZY259.jpg"
+                }, {
+                    "title": "优惠10·",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/7B/Z_QBx18DAraABtQXAAgFWsSjpNA462.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/D9/DsBDFV90VGWAXhnXAANWs0DAonA256.jpg"
+                }, {
+                    "title": "优惠11",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/85/Z_QBx18Y-cuAL2c5AAoZQ7sjGb0355.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/C0/Z_QBx190VGaAY9CSAALI9CpiSAE008.jpg"
+                }, {
+                    "title": "优惠12",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/73/Z_QBx179ix6AWkmhAAQDAz_CuEI107.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/C1/Z_QBx191vNqASVpyAALLtTD0UXM298.jpg"
+                }, {
+                    "title": "优惠13",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/BD/ZxcuGF9Z8BCAEWN9AAQaWPW3J1s245.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/E2/ZxcuGF90VGOAb-NzAAMoUw6WyRc054.jpg"
+                }, {
+                    "title": "优惠14",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/80/DsBDFV79ix6AMc4iAATjozssKZ0407.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/C0/Z_QBx190VGSATFbjAAOUHx9GW3k366.jpg"
+                }, {
+                    "title": "优惠15",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/80/DsBDFV79ix-ARoPMAA6_GScq84E099.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/E2/ZxcuGF90VGWARz4SAALnnlq3jxA592.jpg"
+                }, {
+                    "title": "优惠16",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/A2/Z_QBx19UmmCAQIcyAAcCvrq2org236.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/DA/DsBDFV90VGeASSI4AANVVp0_h0I692.jpg"
+                }, {
+                    "title": "优惠17",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/84/ZxcuGF79iyCAUE7aAAZ0hBh_Ql8823.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/D9/DsBDFV90VGKAQeMxAALvgLL7ek8151.jpg"
+                }, {
+                    "title": "优惠18",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/84/ZxcuGF79iyCARcpWAANExbT_AKI770.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/D9/DsBDFV90VGGAeBp7AAL4sa3_5yI562.jpg"
+                }, {
+                    "title": "优惠19",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/84/ZxcuGF79iyCAaThIAAQXIuSFDfY212.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/C0/Z_QBx190VGWAZtMzAAN4R2Dx4yo293.jpg"
+                }, {
+                    "title": "优惠20",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/92/DsBDFV8Y-cqAF6qCAAX5QJh-HIs017.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/E2/ZxcuGF90VGSAMx7OAAMjDBJX2W0675.jpg"
+                }, {
+                    "title": "优惠21",
+                    "name": "智勇大闯关",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/B6/DsBDFV9Z8BGASeyXAAyLbqrqW8o293.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/E2/ZxcuGF90VGaAFJ8IAAMUuddxD70722.jpg"
+                }, {
+                    "title": "优惠22",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/80/DsBDFV79jSaAXraiAAOf_r-aUiA771.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/C0/Z_QBx190VGGABbxFAAMpcBb4sdk497.jpg"
+                }, {
+                    "title": "优惠23",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/73/Z_QBx179jSeAefZ1AAQxH3H3Lck012.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/D9/DsBDFV90VGWAbzKfAAMMWu8TuX4991.jpg"
+                }, {
+                    "title": "优惠24",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/80/DsBDFV79jSeAaVxhAAUVhwVy1Cs872.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/C0/Z_QBx190VGaAY8UMAANtgqsux4k991.jpg"
+                }, {
+                    "title": "优惠25",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/84/ZxcuGF79jSeAfv2sAAVZ1znTTdk216.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/DA/DsBDFV90VGWASqjmAAMwXYB70nQ253.jpg"
+                }, {
+                    "title": "优惠26",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/80/DsBDFV79jSiAWYwEAARb7hGam2g933.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/E2/ZxcuGF90VGaAJR7jAAML4oeU2cE030.jpg"
+                }, {
+                    "title": "优惠27",
+                    "name": "",
+                    "weight": 0,
+                    "data": "",
+                    "smallImg": "",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/84/ZxcuGF79jSqAdR8bACPhGeNIQyA101.jpg",
+                    "bigImg": "https://line.jzs001.cn/group1/M00/00/C0/Z_QBx190VGKAFIgnAANvsYLUq6M979.jpg"
+                }]
+            }, {
+                "type": "5",
+                "typeName": "首页公告图",
+                "configs": [{
+                    "title": "USDT入款",
+                    "name": "老银河usdt弹窗",
+                    "weight": 8,
+                    "data": "https://line.jzs001.cn/group1/M00/00/9D/Z_QBx19BD9yAf3YlAASNaG8VDM4751.jpg"
+                }, {
+                    "title": "神秘彩金",
+                    "name": "老银河神秘彩金弹窗",
+                    "weight": 7,
+                    "data": "https://line.jzs001.cn/group1/M00/00/AC/ZxcuGF806hiAIiEEAAG1QcdXzRI878.jpg"
+                }, {
+                    "title": "多重豪礼",
+                    "name": "老银河弹窗公告7-14",
+                    "weight": 2,
+                    "data": "https://line.jzs001.cn/group1/M00/00/7F/Z_QBx18Nih6AR9DJAALIPyTZCaA000.jpg"
+                }, {
+                    "title": "信誉品牌",
+                    "name": "PC_YHHB_gg01",
+                    "weight": 1,
+                    "data": "https://line.jzs001.cn/group1/M00/00/85/ZxcuGF79tNqALoFQAAGpIMR95RI157.jpg"
+                }]
+            }, {
+                "type": "6",
+                "typeName": "轮播公告",
+                "configs": [{
+                    "title": "重要通知",
+                    "name": "重要通知",
+                    "weight": 1,
+                    "data": "❤️尊敬的会员您好：平台新增支付宝提款，您绑定支付宝时请您仔细核对支付宝账号是否输入正确，避免绑定错误出款到他人账号给您带来不必要的损失哦！！！"
+                }, {
+                    "title": "数字货币",
+                    "name": "",
+                    "weight": 0,
+                    "data": "❤️ 新时代 新支付 新起点！即日起使用火币数字货币充值中心使用usdt入款，首笔充值2000元+即可领取100元的彩金哦，笔笔还可享受1.5%的入款优惠"
                 }]
             }]
         }
     )
 }))
+
+
+router.get('/api/goods/ranks', (req, res) => {
+    res.send(
+        {
+            "status": 10000,
+            "msg": "查询兑换排行榜成功",
+            "terminal": "0",
+            "data": [{
+                "id": 79,
+                "pluname": "空投美女",
+                "icon": "https://line.jzs001.cn/group1/M00/00/DA/DsBDFV90oFiAPuELABDwddIMAkw789.gif",
+                "smallimg": "#",
+                "cprice": 18000.0,
+                "oprice": 0.0,
+                "price": 54000.0,
+                "type": 1,
+                "describe": "空投美女陪玩两晚一天，学生妹 模特 （只针对有机场直达城市）\r\n我们会在7个工作日内联系您选择美女。",
+                "hot": "1"
+            }]
+        }
+    )
+})
+
 
 router.get('/contact', ((req, res) => {
     res.send(
@@ -3983,6 +4194,141 @@ router.get('/contact', ((req, res) => {
         }
     )
 }))
+
+
+router.get('/api/goods/list', (req, res) => {
+    res.send(
+        {
+            "total": 89,
+            "pageSize": 12,
+            "totalPage": 8,
+            "pageNo": 1,
+            "list": [{
+                "id": 98,
+                "pluname": "宝马M8",
+                "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96f7GAW-ZfAAEcpCnTY38539.jpg",
+                "smallimg": "#",
+                "cprice": 2600000.0,
+                "oprice": 0.0,
+                "price": 8666666.0,
+                "type": 1,
+                "describe": "BMW瞩目新作，致敬与时代共进的行动者。2018款全新BMW 525Li，携诸多创新强势驾临，带来更为夺目的动感设计、洞见未来的创新科技、令人倾心的舒适豪华和激越澎湃的强悍动力。以惊艳的驾驶体验冲破期"
+            }, {
+                "id": 2737,
+                "pluname": "奔驰G级",
+                "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96efKAey8vAAFRRYyjKDg495.jpg",
+                "smallimg": "",
+                "cprice": 1888888.0,
+                "oprice": 0.0,
+                "price": 6888888.0,
+                "type": 1,
+                "sketch": "",
+                "describe": ""
+            }, {
+                "id": 200,
+                "pluname": "欧米茄手表",
+                "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zWbmAG3iGAAHxHmT0isU723.jpg",
+                "smallimg": "#",
+                "cprice": 36000.0,
+                "oprice": 0.0,
+                "price": 188888.0,
+                "type": 1,
+                "describe": "欧米茄(OMEGA)手表 星座系列机械男表123.10.35.20.52.001"
+            }, {
+                "id": 2028,
+                "pluname": "荣泰RT8900智能按摩椅",
+                "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zgSmAATukAABlMpFFyXI878.jpg",
+                "smallimg": "#",
+                "cprice": 48888.0,
+                "oprice": 0.0,
+                "price": 128888.0,
+                "type": 1,
+                "describe": ""
+            }, {
+                "id": 2032,
+                "pluname": "香奈儿",
+                "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zsb6AEslXAABfe4qvmlQ678.jpg",
+                "smallimg": "#",
+                "cprice": 35000.0,
+                "oprice": 0.0,
+                "price": 168888.0,
+                "type": 1,
+                "describe": ""
+            }, {
+                "id": 81,
+                "pluname": "三星W20",
+                "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zs4eAQPlCAAA6aE2NmQ4022.jpg",
+                "smallimg": "#",
+                "cprice": 19999.0,
+                "oprice": 0.0,
+                "price": 88888.0,
+                "type": 1,
+                "describe": "iphonex屏幕：2436x1125像素，摄像：双1200万像素\r\n特性：无线充电 面容ID 后置双摄 全面屏，主屏：5.8英寸"
+            }, {
+                "id": 2741,
+                "pluname": "HUAWEImateXs5G",
+                "icon": "https://line.jzs001.cn/group1/M00/00/E1/ZxcuGF9z-keATZk9AA013bji4TQ293.png",
+                "smallimg": "https://line.jzs001.cn/group1/M00/00/E1/ZxcuGF9z-keATZk9AA013bji4TQ293.png",
+                "cprice": 16999.0,
+                "oprice": 16999.0,
+                "price": 58888.0,
+                "type": 1,
+                "sketch": "",
+                "describe": ""
+            }, {
+                "id": 2029,
+                "pluname": "香奈儿手包",
+                "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zsgCAA257AABiwxfbyCs468.jpg",
+                "smallimg": "#",
+                "cprice": 14000.0,
+                "oprice": 0.0,
+                "price": 56666.0,
+                "type": 1,
+                "describe": ""
+            }, {
+                "id": 713,
+                "pluname": "华为Mate30RS保时捷",
+                "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96f4GAJaPZAACX11_LUo8658.jpg",
+                "smallimg": "#",
+                "cprice": 18000.0,
+                "oprice": 0.0,
+                "price": 54000.0,
+                "type": 1,
+                "describe": "华为（HUAWEI） 华为Mate20 RS 保时捷 手机 瑞红色 全网通（8G+512G）"
+            }, {
+                "id": 99,
+                "pluname": "Apple MacBook Pro",
+                "icon": "https://line.yun-ai.cn/YHH/imgs/1528905838220AppleMacBookPro.jpg",
+                "smallimg": "#",
+                "cprice": 12000.0,
+                "oprice": 0.0,
+                "price": 36000.0,
+                "type": 1,
+                "describe": "苹果MacBook Pro（Retina屏）13.3英寸产品为2012年10月上市的时尚镁铝合金产品，13.3寸2560x1600 Retina屏，配Intel 双核处理器和苹果专属的Mac OS X"
+            }, {
+                "id": 89,
+                "pluname": "平安黄金20克",
+                "icon": "https://line.yun-ai.cn/YHH/imgs/1528904988723金条.jpg",
+                "smallimg": "#",
+                "cprice": 8588.0,
+                "oprice": 0.0,
+                "price": 28888.0,
+                "type": 1,
+                "describe": "零兑金 投资黄金金条工艺金Au9999 平安银行发行 平安金 理财收藏20g"
+            }, {
+                "id": 90,
+                "pluname": "YSL圣罗兰小金条口红",
+                "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zu5GAUplVAACPOqckggs558.jpg",
+                "smallimg": "#",
+                "cprice": 8904.0,
+                "oprice": 0.0,
+                "price": 28888.0,
+                "type": 1,
+                "describe": "迪奥（dior） 【黑色情人节套装】迪奥烈焰蓝金唇膏999/888/520口红礼盒礼物 迪奥口红6件套 满满的爱"
+            }]
+        }
+    )
+})
 
 
 module.exports = router;
