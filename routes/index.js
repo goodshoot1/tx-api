@@ -3917,7 +3917,7 @@ router.get('/api/config', ((req, res) => {
                     "weight": 1,
                     "data": "",
                     "smallImg": "",
-                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/AF/DsBDFV9DUPmABUhFAAsMUhSL9MY244.jpg",
+                    "htmlImg": "https://line.jzs001.cn/group1/M00/00/D0/Z_QBx1-RTLiAc9QAAAtnpoEl4EQ621.jpg",
                     "bigImg": "https://line.jzs001.cn/group1/M00/00/E3/ZxcuGF91ePWARujVAAMZppxTKyk717.jpg"
                 }, {
                     "title": "优惠6",
@@ -4092,22 +4092,37 @@ router.get('/api/config', ((req, res) => {
                 "type": "5",
                 "typeName": "首页公告图",
                 "configs": [{
-                    "title": "USDT入款",
-                    "name": "老银河usdt弹窗",
-                    "weight": 8,
-                    "data": "https://line.jzs001.cn/group1/M00/00/9D/Z_QBx19BD9yAf3YlAASNaG8VDM4751.jpg"
-                }, {
-                    "title": "神秘彩金",
-                    "name": "老银河神秘彩金弹窗",
+                    "title": "新人成就豪礼",
+                    "name": "新人注册享好礼",
                     "weight": 7,
-                    "data": "https://line.jzs001.cn/group1/M00/00/AC/ZxcuGF806hiAIiEEAAG1QcdXzRI878.jpg"
+                    "data": "https://line.jzs001.cn/group1/M00/00/D0/Z_QBx1-RUkmAf7SrAAIn4NPxOHs640.jpg"
                 }, {
-                    "title": "多重豪礼",
-                    "name": "老银河弹窗公告7-14",
+                    "title": "网银入款优惠",
+                    "name": "网银入款享优惠",
+                    "weight": 6,
+                    "data": "https://line.jzs001.cn/group1/M00/00/D0/Z_QBx1-RTsCABSVhAAS9EEULRiE251.jpg"
+                }, {
+                    "title": "积分兑换商城",
+                    "name": "积分兑换商城",
+                    "weight": 5,
+                    "data": "https://line.jzs001.cn/group1/M00/00/F5/ZxcuGF-RT5yAQvGJAAYCA3uVZ_o107.jpg"
+                }, {
+                    "title": "下载手机APP",
+                    "name": "下载APP",
+                    "weight": 4,
+                    "data": "https://line.jzs001.cn/group1/M00/00/F5/ZxcuGF-RTsGAF-8LAAPmBcoGNhY460.jpg"
+                }, {
+                    "title": "全新代理模式",
+                    "name": "全新代理模式",
+                    "weight": 3,
+                    "data": "https://line.jzs001.cn/group1/M00/00/D0/Z_QBx1-RTr-AEGTcAAVp1yguwWc998.jpg"
+                }, {
+                    "title": "USDT入款优惠",
+                    "name": "老银河usdt弹窗",
                     "weight": 2,
-                    "data": "https://line.jzs001.cn/group1/M00/00/7F/Z_QBx18Nih6AR9DJAALIPyTZCaA000.jpg"
+                    "data": "https://line.jzs001.cn/group1/M00/00/F2/ZxcuGF-PwUWAdq1VAAT-Z9UMuFs870.jpg"
                 }, {
-                    "title": "信誉品牌",
+                    "title": "信誉品牌值信赖",
                     "name": "PC_YHHB_gg01",
                     "weight": 1,
                     "data": "https://line.jzs001.cn/group1/M00/00/85/ZxcuGF79tNqALoFQAAGpIMR95RI157.jpg"
@@ -4117,14 +4132,19 @@ router.get('/api/config', ((req, res) => {
                 "typeName": "轮播公告",
                 "configs": [{
                     "title": "重要通知",
+                    "name": "",
+                    "weight": 3,
+                    "data": "尊敬的澳门银河会员：为了给您提供更好的体验，在线客服系统升级，如您无法访问可以联系QQ客服：涵雪3008943866给您带来不便敬请谅解！！"
+                }, {
+                    "title": "重要通知",
                     "name": "重要通知",
                     "weight": 1,
                     "data": "❤️尊敬的会员您好：平台新增支付宝提款，您绑定支付宝时请您仔细核对支付宝账号是否输入正确，避免绑定错误出款到他人账号给您带来不必要的损失哦！！！"
                 }, {
-                    "title": "数字货币",
+                    "title": "最新优惠",
                     "name": "",
                     "weight": 0,
-                    "data": "❤️ 新时代 新支付 新起点！即日起使用火币数字货币充值中心使用usdt入款，首笔充值2000元+即可领取100元的彩金哦，笔笔还可享受1.5%的入款优惠"
+                    "data": "❤️【USDT入款享好礼】下载火币App,首次使用USDT单笔存款等值2000RMB+领取100的免费彩金,单笔存款20 USDT+即可享受最高2%的入款优惠,第笔存,笔笔送,彩金无上限,等你来咨询!"
                 }]
             }]
         }
@@ -4197,138 +4217,507 @@ router.get('/contact', ((req, res) => {
 
 
 router.get('/api/goods/list', (req, res) => {
-    res.send(
+
+
+    const allGoods = [
         {
-            "total": 89,
-            "pageSize": 12,
-            "totalPage": 8,
-            "pageNo": 1,
-            "list": [{
-                "id": 98,
-                "pluname": "宝马M8",
-                "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96f7GAW-ZfAAEcpCnTY38539.jpg",
-                "smallimg": "#",
-                "cprice": 2600000.0,
-                "oprice": 0.0,
-                "price": 8666666.0,
-                "type": 1,
-                "describe": "BMW瞩目新作，致敬与时代共进的行动者。2018款全新BMW 525Li，携诸多创新强势驾临，带来更为夺目的动感设计、洞见未来的创新科技、令人倾心的舒适豪华和激越澎湃的强悍动力。以惊艳的驾驶体验冲破期"
-            }, {
-                "id": 2737,
-                "pluname": "奔驰G级",
-                "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96efKAey8vAAFRRYyjKDg495.jpg",
-                "smallimg": "",
-                "cprice": 1888888.0,
-                "oprice": 0.0,
-                "price": 6888888.0,
-                "type": 1,
-                "sketch": "",
-                "describe": ""
-            }, {
-                "id": 200,
-                "pluname": "欧米茄手表",
-                "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zWbmAG3iGAAHxHmT0isU723.jpg",
-                "smallimg": "#",
-                "cprice": 36000.0,
-                "oprice": 0.0,
-                "price": 188888.0,
-                "type": 1,
-                "describe": "欧米茄(OMEGA)手表 星座系列机械男表123.10.35.20.52.001"
-            }, {
-                "id": 2028,
-                "pluname": "荣泰RT8900智能按摩椅",
-                "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zgSmAATukAABlMpFFyXI878.jpg",
-                "smallimg": "#",
-                "cprice": 48888.0,
-                "oprice": 0.0,
-                "price": 128888.0,
-                "type": 1,
-                "describe": ""
-            }, {
-                "id": 2032,
-                "pluname": "香奈儿",
-                "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zsb6AEslXAABfe4qvmlQ678.jpg",
-                "smallimg": "#",
-                "cprice": 35000.0,
-                "oprice": 0.0,
-                "price": 168888.0,
-                "type": 1,
-                "describe": ""
-            }, {
-                "id": 81,
-                "pluname": "三星W20",
-                "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zs4eAQPlCAAA6aE2NmQ4022.jpg",
-                "smallimg": "#",
-                "cprice": 19999.0,
-                "oprice": 0.0,
-                "price": 88888.0,
-                "type": 1,
-                "describe": "iphonex屏幕：2436x1125像素，摄像：双1200万像素\r\n特性：无线充电 面容ID 后置双摄 全面屏，主屏：5.8英寸"
-            }, {
-                "id": 2741,
-                "pluname": "HUAWEImateXs5G",
-                "icon": "https://line.jzs001.cn/group1/M00/00/E1/ZxcuGF9z-keATZk9AA013bji4TQ293.png",
-                "smallimg": "https://line.jzs001.cn/group1/M00/00/E1/ZxcuGF9z-keATZk9AA013bji4TQ293.png",
-                "cprice": 16999.0,
-                "oprice": 16999.0,
-                "price": 58888.0,
-                "type": 1,
-                "sketch": "",
-                "describe": ""
-            }, {
-                "id": 2029,
-                "pluname": "香奈儿手包",
-                "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zsgCAA257AABiwxfbyCs468.jpg",
-                "smallimg": "#",
-                "cprice": 14000.0,
-                "oprice": 0.0,
-                "price": 56666.0,
-                "type": 1,
-                "describe": ""
-            }, {
-                "id": 713,
-                "pluname": "华为Mate30RS保时捷",
-                "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96f4GAJaPZAACX11_LUo8658.jpg",
-                "smallimg": "#",
-                "cprice": 18000.0,
-                "oprice": 0.0,
-                "price": 54000.0,
-                "type": 1,
-                "describe": "华为（HUAWEI） 华为Mate20 RS 保时捷 手机 瑞红色 全网通（8G+512G）"
-            }, {
-                "id": 99,
-                "pluname": "Apple MacBook Pro",
-                "icon": "https://line.yun-ai.cn/YHH/imgs/1528905838220AppleMacBookPro.jpg",
-                "smallimg": "#",
-                "cprice": 12000.0,
-                "oprice": 0.0,
-                "price": 36000.0,
-                "type": 1,
-                "describe": "苹果MacBook Pro（Retina屏）13.3英寸产品为2012年10月上市的时尚镁铝合金产品，13.3寸2560x1600 Retina屏，配Intel 双核处理器和苹果专属的Mac OS X"
-            }, {
-                "id": 89,
-                "pluname": "平安黄金20克",
-                "icon": "https://line.yun-ai.cn/YHH/imgs/1528904988723金条.jpg",
-                "smallimg": "#",
-                "cprice": 8588.0,
-                "oprice": 0.0,
-                "price": 28888.0,
-                "type": 1,
-                "describe": "零兑金 投资黄金金条工艺金Au9999 平安银行发行 平安金 理财收藏20g"
-            }, {
-                "id": 90,
-                "pluname": "YSL圣罗兰小金条口红",
-                "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zu5GAUplVAACPOqckggs558.jpg",
-                "smallimg": "#",
-                "cprice": 8904.0,
-                "oprice": 0.0,
-                "price": 28888.0,
-                "type": 1,
-                "describe": "迪奥（dior） 【黑色情人节套装】迪奥烈焰蓝金唇膏999/888/520口红礼盒礼物 迪奥口红6件套 满满的爱"
-            }]
-        }
-    )
+            "id": 98,
+            "pluname": "宝马M8",
+            "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96f7GAW-ZfAAEcpCnTY38539.jpg",
+            "smallimg": "#",
+            "cprice": 2600000.0,
+            "oprice": 0.0,
+            "price": 8666666.0,
+            "type": 1,
+            "describe": "BMW瞩目新作，致敬与时代共进的行动者。2018款全新BMW 525Li，携诸多创新强势驾临，带来更为夺目的动感设计、洞见未来的创新科技、令人倾心的舒适豪华和激越澎湃的强悍动力。以惊艳的驾驶体验冲破期"
+        }, {
+            "id": 2737,
+            "pluname": "奔驰G级",
+            "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96efKAey8vAAFRRYyjKDg495.jpg",
+            "smallimg": "",
+            "cprice": 1888888.0,
+            "oprice": 0.0,
+            "price": 6888888.0,
+            "type": 1,
+            "sketch": "",
+            "describe": ""
+        }, {
+            "id": 200,
+            "pluname": "欧米茄手表",
+            "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zWbmAG3iGAAHxHmT0isU723.jpg",
+            "smallimg": "#",
+            "cprice": 36000.0,
+            "oprice": 0.0,
+            "price": 188888.0,
+            "type": 1,
+            "describe": "欧米茄(OMEGA)手表 星座系列机械男表123.10.35.20.52.001"
+        }, {
+            "id": 2028,
+            "pluname": "荣泰RT8900智能按摩椅",
+            "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zgSmAATukAABlMpFFyXI878.jpg",
+            "smallimg": "#",
+            "cprice": 48888.0,
+            "oprice": 0.0,
+            "price": 128888.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 2032,
+            "pluname": "香奈儿",
+            "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zsb6AEslXAABfe4qvmlQ678.jpg",
+            "smallimg": "#",
+            "cprice": 35000.0,
+            "oprice": 0.0,
+            "price": 168888.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 81,
+            "pluname": "三星W20",
+            "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zs4eAQPlCAAA6aE2NmQ4022.jpg",
+            "smallimg": "#",
+            "cprice": 19999.0,
+            "oprice": 0.0,
+            "price": 88888.0,
+            "type": 1,
+            "describe": "iphonex屏幕：2436x1125像素，摄像：双1200万像素\r\n特性：无线充电 面容ID 后置双摄 全面屏，主屏：5.8英寸"
+        }, {
+            "id": 2741,
+            "pluname": "HUAWEImateXs5G",
+            "icon": "https://line.jzs001.cn/group1/M00/00/E1/ZxcuGF9z-keATZk9AA013bji4TQ293.png",
+            "smallimg": "https://line.jzs001.cn/group1/M00/00/E1/ZxcuGF9z-keATZk9AA013bji4TQ293.png",
+            "cprice": 16999.0,
+            "oprice": 16999.0,
+            "price": 58888.0,
+            "type": 1,
+            "sketch": "",
+            "describe": ""
+        }, {
+            "id": 2029,
+            "pluname": "香奈儿手包",
+            "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zsgCAA257AABiwxfbyCs468.jpg",
+            "smallimg": "#",
+            "cprice": 14000.0,
+            "oprice": 0.0,
+            "price": 56666.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 713,
+            "pluname": "华为Mate30RS保时捷",
+            "icon": "https://line.jzs001.cn/group1/M00/00/DD/DsBDFV96f4GAJaPZAACX11_LUo8658.jpg",
+            "smallimg": "#",
+            "cprice": 18000.0,
+            "oprice": 0.0,
+            "price": 54000.0,
+            "type": 1,
+            "describe": "华为（HUAWEI） 华为Mate20 RS 保时捷 手机 瑞红色 全网通（8G+512G）"
+        }, {
+            "id": 99,
+            "pluname": "Apple MacBook Pro",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528905838220AppleMacBookPro.jpg",
+            "smallimg": "#",
+            "cprice": 12000.0,
+            "oprice": 0.0,
+            "price": 36000.0,
+            "type": 1,
+            "describe": "苹果MacBook Pro（Retina屏）13.3英寸产品为2012年10月上市的时尚镁铝合金产品，13.3寸2560x1600 Retina屏，配Intel 双核处理器和苹果专属的Mac OS X"
+        }, {
+            "id": 89,
+            "pluname": "平安黄金20克",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528904988723金条.jpg",
+            "smallimg": "#",
+            "cprice": 8588.0,
+            "oprice": 0.0,
+            "price": 28888.0,
+            "type": 1,
+            "describe": "零兑金 投资黄金金条工艺金Au9999 平安银行发行 平安金 理财收藏20g"
+        }, {
+            "id": 90,
+            "pluname": "YSL圣罗兰小金条口红",
+            "icon": "https://line.jzs001.cn/group1/M00/00/BE/Z_QBx19zu5GAUplVAACPOqckggs558.jpg",
+            "smallimg": "#",
+            "cprice": 8904.0,
+            "oprice": 0.0,
+            "price": 28888.0,
+            "type": 1,
+            "describe": "迪奥（dior） 【黑色情人节套装】迪奥烈焰蓝金唇膏999/888/520口红礼盒礼物 迪奥口红6件套 满满的爱"
+        },
+        {
+            "id": 1736,
+            "pluname": "苹果（Apple）iMac ME086C",
+            "icon": "https://line.txwl-888.com/group1/M00/00/02/ZxcuGF3HJTuAZEEnAACobUycXYo232.jpg",
+            "smallimg": "#",
+            "cprice": 8288.0,
+            "oprice": 0.0,
+            "price": 28888.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 1737,
+            "pluname": "联想 YOGA3 YOGA 13.3英寸",
+            "icon": "https://line.txwl-888.com/group1/M00/00/02/ZxcuGF3HKLGAYvHxAAGIs8m0arE410.jpg",
+            "smallimg": "#",
+            "cprice": 7899.0,
+            "oprice": 0.0,
+            "price": 26666.0,
+            "type": 1,
+            "describe": "联想 YOGA3 YOGA3 13 Pro-I5Y70(L) yoga3 pro 13.3英寸"
+        }, {
+            "id": 1533,
+            "pluname": "Night Courrier人造帆布手拿",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1559273806240古驰人造帆布手拿包.jpg",
+            "smallimg": "#",
+            "cprice": 7800.0,
+            "oprice": 0.0,
+            "price": 23588.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 117,
+            "pluname": "美的冰箱",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528900162904美的冰箱.jpg",
+            "smallimg": "#",
+            "cprice": 6999.0,
+            "oprice": 0.0,
+            "price": 21000.0,
+            "type": 1,
+            "describe": "美的（Midea） 432升冰箱 对开门家用变频风冷无霜多门电冰箱BCD-432WGPZM 玫瑰金"
+        }, {
+            "id": 115,
+            "pluname": "格力空调",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528899658809格力空调.jpg",
+            "smallimg": "#",
+            "cprice": 6666.0,
+            "oprice": 0.0,
+            "price": 19998.0,
+            "type": 1,
+            "describe": "格力(GREE) 变频 冷暖空调 U致1级奢华金挂机空调 KFR-32GW(32589)FNhEa-A1"
+        }, {
+            "id": 421,
+            "pluname": "充气娃娃",
+            "icon": "https://line.jzs001.cn/group1/M00/00/D8/DsBDFV9zMVmAR78FAAB3tH_r4dI687.jpg",
+            "smallimg": "#",
+            "cprice": 6680.0,
+            "oprice": 0.0,
+            "price": 19888.0,
+            "type": 1,
+            "describe": "水之七都（Water Seven） 实体娃娃硅胶男用无需充气娃娃可升级智能发音发热定制成人用品 158cm 1"
+        }, {
+            "id": 80,
+            "pluname": "阿玛尼手提包",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528904213796利登阿玛尼.jpg",
+            "smallimg": "#",
+            "cprice": 5188.0,
+            "oprice": 0.0,
+            "price": 15500.0,
+            "type": 1,
+            "describe": "利登阿玛尼（LidenAmani） 鳄鱼纹编织纹男士手提包商务斜挎公文包单肩包 黑色编织纹"
+        }, {
+            "id": 116,
+            "pluname": "海尔洗衣机",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528899946524海尔洗衣机.jpg",
+            "smallimg": "#",
+            "cprice": 5188.0,
+            "oprice": 0.0,
+            "price": 15500.0,
+            "type": 1,
+            "describe": "海尔（Haier) 8公斤 斐雪派克直驱变频滚筒洗衣机 智能APP控制 精准投放 EG8014BDX59SDU1"
+        }, {
+            "id": 651,
+            "pluname": "佳能单反相机",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1542963106496佳能单反相机.jpg",
+            "smallimg": "#",
+            "cprice": 4999.0,
+            "oprice": 0.0,
+            "price": 14997.0,
+            "type": 1,
+            "describe": "佳能（Canon）EOS 800D 单反套机 （EF-S 18-55mm f/4-5.6 IS STM 镜头）"
+        }, {
+            "id": 1738,
+            "pluname": "小米电视2 55英寸(家庭影院版)",
+            "icon": "https://line.txwl-888.com/group1/M00/00/02/DsBDFV3HJ1aAT7LPAAEF-cclPxY272.jpg",
+            "smallimg": "#",
+            "cprice": 4499.0,
+            "oprice": 0.0,
+            "price": 13888.0,
+            "type": 1,
+            "describe": "小米电视2 55英寸(家庭影院版）"
+        }, {
+            "id": 113,
+            "pluname": "老船木仿古茶几",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528898543956老船木茶具.jpg",
+            "smallimg": "#",
+            "cprice": 4000.0,
+            "oprice": 0.0,
+            "price": 12000.0,
+            "type": 1,
+            "describe": "老船木茶桌椅组合阳台小茶台中式仿古小型茶几功夫茶艺桌实木家具"
+        }, {
+            "id": 87,
+            "pluname": "五星级酒店兑换劵",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528960331852星级酒店.jpg",
+            "smallimg": "#",
+            "cprice": 4000.0,
+            "oprice": 0.0,
+            "price": 12000.0,
+            "type": 1,
+            "describe": "五星级酒店配套功能应包括：商务中心、会议室、餐厅、宴会厅、健身房、游泳池、超市、多功能厅、医务室、后勤用房等"
+        }, {
+            "id": 1272,
+            "pluname": "希尔顿标5星际酒店",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1554427189371希尔顿标5星酒店.jpg",
+            "smallimg": "#",
+            "cprice": 3999.0,
+            "oprice": 0.0,
+            "price": 11997.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 1540,
+            "pluname": "MINE寐浅 进口长绒提花四件套",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1559278229185MINE寐浅进口长绒提花四件套.jpg",
+            "smallimg": "#",
+            "cprice": 3680.0,
+            "oprice": 0.0,
+            "price": 11088.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 1263,
+            "pluname": " 锐步家用折叠跑步机",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1554426285148锐步家用折叠跑步机.jpg",
+            "smallimg": "#",
+            "cprice": 2999.0,
+            "oprice": 0.0,
+            "price": 8997.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 1262,
+            "pluname": "冰虎Alpicool车载冰箱",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1554426122725冰虎Alpicool车载冰箱.jpg",
+            "smallimg": "#",
+            "cprice": 2000.0,
+            "oprice": 0.0,
+            "price": 6000.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 1266,
+            "pluname": "洛克菲勒折叠电动自行车",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1554426653668洛克菲勒折叠电动自行车.jpg",
+            "smallimg": "#",
+            "cprice": 2999.0,
+            "oprice": 0.0,
+            "price": 8997.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 1264,
+            "pluname": " 九阳全自动洗碗机",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1554426483821九阳全自动洗碗机.jpg",
+            "smallimg": "#",
+            "cprice": 2199.0,
+            "oprice": 0.0,
+            "price": 6597.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 1742,
+            "pluname": "精致双人吊椅",
+            "icon": "https://line.txwl-888.com/group1/M00/00/02/Z_QBx13HORqAcWLJAADCAyumiTs738.jpg",
+            "smallimg": "#",
+            "cprice": 1888.0,
+            "oprice": 0.0,
+            "price": 5888.0,
+            "type": 1,
+            "describe": "精致双人吊椅"
+        }, {
+            "id": 84,
+            "pluname": "法玛莎皮带",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528904399215法玛莎皮带.jpg",
+            "smallimg": "#",
+            "cprice": 1680.0,
+            "oprice": 0.0,
+            "price": 5040.0,
+            "type": 1,
+            "describe": "法玛莎品牌皮带男新品真头层牛皮自动扣商务休闲腰带光面合金裤带"
+        }, {
+            "id": 83,
+            "pluname": "Dear Rose纯真女神",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528905839519DearRose纯真女神.jpg",
+            "smallimg": "#",
+            "cprice": 1680.0,
+            "oprice": 0.0,
+            "price": 5040.0,
+            "type": 1,
+            "describe": "Dear Rose纯真女神法国正品品牌女士香水风情持久清新100ML包邮"
+        }, {
+            "id": 652,
+            "pluname": "航拍无人机",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1542963322854航拍仪.jpg",
+            "smallimg": "#",
+            "cprice": 1299.0,
+            "oprice": 0.0,
+            "price": 3897.0,
+            "type": 1,
+            "describe": "美国Holy STONE专业级无人机HS100G航拍遥控飞机5G图传1080P高清广角GPS智能四轴飞行器模型成人航模双电版"
+        }, {
+            "id": 1739,
+            "pluname": "智能平衡车",
+            "icon": "https://line.txwl-888.com/group1/M00/00/02/DsBDFV3HRdOAOYIyAAH67PT4utw842.jpg",
+            "smallimg": "#",
+            "cprice": 1588.0,
+            "oprice": 0.0,
+            "price": 3888.0,
+            "type": 1,
+            "describe": "ugogo智能平衡车"
+        }, {
+            "id": 86,
+            "pluname": "携程全球游飞机套票",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528960331450机票.png",
+            "smallimg": "#",
+            "cprice": 1000.0,
+            "oprice": 0.0,
+            "price": 3000.0,
+            "type": 1,
+            "describe": "国内任性游，你们飞，我买单！"
+        },
+
+        {
+            "id": 114,
+            "pluname": "功夫茶具",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528899431737功夫茶具.jpg",
+            "smallimg": "#",
+            "cprice": 888.0,
+            "oprice": 0.0,
+            "price": 2664.0,
+            "type": 1,
+            "describe": "豪峰紫砂功夫茶具套装家用简约全自动电磁炉实木茶盘茶壶茶杯整套"
+        }, {
+            "id": 653,
+            "pluname": "飞利浦剃须刀",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1542964025417飞利浦剃须刀.jpg",
+            "smallimg": "#",
+            "cprice": 799.0,
+            "oprice": 0.0,
+            "price": 2397.0,
+            "type": 1,
+            "describe": "飞利浦（PHILIPS）男士电动剃须刀全身水洗剃胡刀胡须刀刮胡刀智能清洁S5551/27"
+        }, {
+            "id": 88,
+            "pluname": "华为快充充电宝",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1528904870151华为充电宝.jpg",
+            "smallimg": "#",
+            "cprice": 588.0,
+            "oprice": 0.0,
+            "price": 1797.0,
+            "type": 1,
+            "describe": "华为10000mAh 移动电源 9V2A 快充版（曜石黑）"
+        }, {
+            "id": 590,
+            "pluname": "暴龙眼镜",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1542529961824暴龙眼镜.jpg",
+            "smallimg": "#",
+            "cprice": 599.0,
+            "oprice": 0.0,
+            "price": 1797.0,
+            "type": 1,
+            "describe": "暴龙太阳镜女潮 高清偏光驾驶眼镜 优雅蝶形时尚明星款 可配近视镜墨镜"
+        }, {
+            "id": 1278,
+            "pluname": "马爹利（Martell）",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1554427715799马爹利（Martell）.jpg",
+            "smallimg": "#",
+            "cprice": 512.0,
+            "oprice": 0.0,
+            "price": 1536.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 1274,
+            "pluname": "zippo打火机-万宝路",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1554427365369zippo打火机-万宝路.jpg",
+            "smallimg": "#",
+            "cprice": 500.0,
+            "oprice": 0.0,
+            "price": 1500.0,
+            "type": 1,
+            "describe": ""
+        }, {
+            "id": 648,
+            "pluname": "行车记录仪",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1542961433853行车记录仪.jpg",
+            "smallimg": "#",
+            "cprice": 499.0,
+            "oprice": 0.0,
+            "price": 1497.0,
+            "type": 1,
+            "describe": "思特（elebest）D200 行车记录仪高清夜视流媒体无光夜视后视镜一体机 8英寸触屏缩时录影破雨除雾"
+        }, {
+            "id": 203,
+            "pluname": "美商海盗船K95",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1530531754318海盗船键盘.jpg",
+            "smallimg": "#",
+            "cprice": 1600.0,
+            "oprice": 0.0,
+            "price": 4800.0,
+            "type": 1,
+            "describe": "美商海盗船 (USCORSAIR) K95 RGB PLATINUM 银轴 青铜色 游戏机械键盘 RGB背光 6个自定义G键"
+        }, {
+            "id": 204,
+            "pluname": "美商海盗船K68",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1530531755842美商海盗船键盘.jpg",
+            "smallimg": "#",
+            "cprice": 688.0,
+            "oprice": 0.0,
+            "price": 2064.0,
+            "type": 1,
+            "describe": "美商海盗船 (USCORSAIR) K68 机械键盘 黑色 Cherry红轴 红色背光 防泼溅防尘"
+        }, {
+            "id": 205,
+            "pluname": "美商海盗船(USCorsair)",
+            "icon": "https://line.yun-ai.cn/YHH/imgs/1530531755684美商海盗船耳机.jpg",
+            "smallimg": "#",
+            "cprice": 599.0,
+            "oprice": 0.0,
+            "price": 1797.0,
+            "type": 1,
+            "describe": "美商海盗船(USCorsair) VOID PRO RGB USB 黑色 杜比7.1声道 头戴式电脑耳机 游戏耳机 带麦克风 RGB灯光"
+        },
+    ]
+    console.log('req.params', req.query);
+    const {pageNo, pageSize} = req.query;
+
+    console.log(pageNo, pageSize);
+
+    if (!pageNo || !pageSize) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send(
+            {
+                "total": allGoods.length,
+                pageSize,
+                "totalPage": Math.ceil(allGoods.length / pageSize),
+                pageNo,
+                "list": allGoods.slice(
+                    (pageNo - 1) * pageSize,
+                    pageSize * pageNo > allGoods.length ? allGoods.length : pageSize * pageNo
+                )
+            }
+        )
+    }
+
+
 })
 
 
 module.exports = router;
+
+
+
+
