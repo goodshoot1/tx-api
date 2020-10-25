@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const gameData = require('./../data/game');
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -4715,6 +4717,34 @@ router.get('/api/goods/list', (req, res) => {
 
 })
 
+
+router.get('/api/game/list', ((req, res) => {
+    const {gameType, pageNo, pageSize} = req.query;
+
+    if (!pageNo || !pageSize || !gameType) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+
+        const data = gameData[gameType].data[0].subMenus;
+        res.send(
+            {
+                "total": data.length,
+                pageSize,
+                "totalPage": Math.ceil(data.length / pageSize),
+                pageNo,
+                "list": data.slice(
+                    (pageNo - 1) * pageSize,
+                    pageSize * pageNo > data.length ? data.length : pageSize * pageNo
+                )
+            }
+        )
+    }
+
+
+}))
 
 module.exports = router;
 
