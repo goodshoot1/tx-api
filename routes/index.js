@@ -4746,6 +4746,61 @@ router.get('/api/game/list', ((req, res) => {
 
 }))
 
+
+router.post('/api/user/login', (req, res) => {
+    const {username, password} = req.body;
+
+    console.log('body', req.body);
+
+    console.log('username', username, 'password', password);
+
+    if (username !== 'weide1235' || password !== 'chen5858') {
+        res.send({
+            msg: "用户名或密码不正确",
+            status: 20000
+        })
+    } else {
+        res.send({
+            "status": 10000,
+            "msg": "登录成功",
+            "terminal": "0",
+            "data": {
+                "username": "weide1235",
+                "integral": "1000.00",
+                "token": "KrpV2BeLFw19pTkR9xPPKlXJRf+jApeRqzF5xJkMRQoYoINrGnAAE4Trq7asueRSxpe1rHtWxY63rLAasBtUxNTxQ4/YCxz1EMxfW1vGdvB2lyPzMGqtH6rdrXMnbgS3pOd1d3kjIGTLBH3VW4cZUa3BLP2zDkkEK+2lKSDYTSudXPkfa5fsh79DoQ54cLlMDxxV5hz1D3OV5Zb//OBA3GS9i0FGkpeqRCqO/INu86HANZ4iRJ/sy71R+LtzNb6/uG4GryoIR7xGJH9l33hHTAcsOFKnjHPig7gcScxzy+7YU7E/KKYXZtv581AlfCSRlT7WRTzvR38Ar8L8ZZiecCd7RPYYndfABUjoActL9LraGUBrUXpfZrmMLsCbZ4qNXzlmg4nwB/eA1INWYmV1+b3WGn7lYPmibdSnpnPBmMYAVxCB7pIGO7Gv/aoqH9Xe1CpIwttYSMBm45+YYHs4UxXM7rea3RGHNZ0/B/mWcSK3e536cN731b109mZQMrvt",
+                "noread": 0,
+                "wallet": "0.00",
+                "isActive": 0
+            }
+        })
+    }
+
+})
+
+/**
+ * 积分兑换
+ */
+router.post('/api/user/exchange', (req, res) => {
+    const {id, price} = req.body;
+
+    console.log('body', req.body);
+
+    if (price > 88888) {
+        res.send({
+            msg: "积分不足，请充值",
+            status: 20000
+        })
+    } else {
+        res.send({
+            "status": 10000,
+            "msg": "积分兑换成功，商品id：" + id + " 商品积分：" + price,
+            "terminal": "0",
+        })
+    }
+
+})
+
+
 module.exports = router;
 
 
