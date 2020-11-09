@@ -4750,10 +4750,6 @@ router.get('/api/game/list', ((req, res) => {
 router.post('/api/user/login', (req, res) => {
     const {username, password} = req.body;
 
-    console.log('body', req.body);
-
-    console.log('username', username, 'password', password);
-
     if (username !== 'weide1235' || password !== 'chen5858') {
         res.send({
             msg: "用户名或密码不正确",
@@ -4782,8 +4778,6 @@ router.post('/api/user/login', (req, res) => {
  */
 router.post('/api/user/exchange', (req, res) => {
     const {id, price} = req.body;
-
-    console.log('body', req.body);
 
     if (price > 88888) {
         res.send({
