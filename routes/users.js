@@ -15,7 +15,7 @@ router.get('/info', (req, res) => {
         "data": {
             "uid": 3899487,
             "username": "weide1235",
-            "userTypeName": "会员",
+            "userTypeName": "新会员",
             "loginMobile": "",
             "mobile": "13887656588",
             "wallet": 1000.0,
