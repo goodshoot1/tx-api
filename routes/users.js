@@ -1,4 +1,5 @@
 var express = require('express');
+const {route} = require('.');
 var router = express.Router();
 
 /* GET users listing. */
@@ -276,6 +277,35 @@ router.post('/batch', (req, res) => {
             }]
         }
     )
+})
+
+router.post('/register', (req, res) => {
+    const {username, password, phoneNumber, wechat, commend} = req.body;
+    if (!username || !password || !phoneNumber || !wechat) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+        return;
+    }
+
+    res.send(
+        {
+            "status": 10000,
+            "msg": "注册成功",
+            "terminal": "0",
+            "data": {
+                "username": username,
+                "integral": "8888.00",
+                "token": "jB632o+kL+Vvmg/Nx/wbYqKbuzBjM70k61GKkFX4+D3IfMto1C++bQambmq3cCpR3hwY4GtgKF0Z9aArcIUhL74kEIuVWzMEwSXUqgrl9DU/zPF6lqUlgZ68IhnmseRkH+9/O0eD8OXK6W9WWDTKKS4aoD3eSwureR4Mzc6EFeo3KWrW4pFaDSQVOFJsB0XkDyTUBOEMrmb5ot+WEmA3nTILOwfOOUpCE0wUQDK0XtNWREaz1gGWHMXypfutR9P+ypmCr9aCdB8DxSp/toLxquwnl2p8neH3qcmcA6VAOHlKqHe00pZkzsfXkS0nf+KfqynXZzbiyiTuI2pgya8OQzsgirrgeKLDYTsJu/aXhlPHz4HHlk+fds6AFJ2O1oa1zQlgZJNIVgoIzrfQOzS9X+x3mrQwjrXramCmKQnIfQBWid8UKqy4NRJc8wDcvinNv6DwI8KRmVSns/rZOmzf+DAhEWt2kEiURFy7AZTtWzAFTGhseg4NVt0Zyy9M2FFT",
+                "noread": 0,
+                "wallet": "1000.00",
+                "isActive": 0
+            }
+        }
+    )
+
+
 })
 
 
