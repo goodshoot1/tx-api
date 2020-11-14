@@ -308,5 +308,198 @@ router.post('/register', (req, res) => {
 
 })
 
+/**
+ * 回收金额
+ */
+router.post('/recycle', (req, res) => {
+    res.send({"status": 10000, "msg": "回收游戏余额成功", "data": {"wallet": 0.0, "balance": 0.0}})
+})
+
+
+router.post('/payConfig', (req, res) => {
+    res.send({
+        "status": 10000,
+        "msg": "查询成功",
+        "data": [{
+            "channel": 15,
+            "scancode": "card",
+            "scanname": "VIP转账",
+            "icon": "https://line.jzs001.cn/group1/M00/00/9C/DsBDFV8qvw6APlXoAAAOhdGKLQM690.jpg",
+            "type": 6,
+            "paymentChannel": "16",
+            "config": [{
+                "payId": 3668,
+                "minquota": 200.0,
+                "maxquota": 10000.0,
+                "paymentName": "MAFG",
+                "scancode": "card",
+                "scanname": "VIP转账",
+                "solidStatus": 0,
+                "channels": [{"code": "ali", "desc": "支付宝转账"}, {"code": "yl", "desc": "银联转账"}]
+            }]
+        }, {
+            "channel": 14,
+            "scancode": "kf",
+            "scanname": "天下尊享支付",
+            "icon": "https://line.jzs001.cn/group1/M00/00/7A/Z_QBx18Bp_SAE4gGAAADmClhtIo177.jpg",
+            "type": 5,
+            "paymentChannel": "15",
+            "config": [{
+                "payId": 3696,
+                "minquota": 10.0,
+                "maxquota": 50000.0,
+                "paymentName": "ZXKF",
+                "scancode": "kf",
+                "scanname": "VIP支付",
+                "solidStatus": 0
+            }, {
+                "payId": 3821,
+                "minquota": 10.0,
+                "maxquota": 50000.0,
+                "paymentName": "ZXSZ",
+                "scancode": "kf",
+                "scanname": "数字支付",
+                "solidStatus": 0
+            }]
+        }, {
+            "channel": 5,
+            "scancode": "yl",
+            "scanname": "银联支付",
+            "icon": "https://line.txwl-888.com/group1/M00/00/2F/ZxcuGF5LTjKAJxjFAAAIdpzEHY4254.png",
+            "type": 2,
+            "paymentChannel": "7",
+            "config": []
+        }, {
+            "channel": 11,
+            "scancode": "bit",
+            "scanname": "加密货币支付",
+            "icon": "https://line.txwl-888.com/group1/M00/00/2F/ZxcuGF5LTqiAUiUzAAAKZqW6gnA420.png",
+            "type": 2,
+            "paymentChannel": "14",
+            "config": [{
+                "payId": 4203,
+                "minquota": 10.0,
+                "maxquota": 5000.0,
+                "paymentName": "TG",
+                "scancode": "bit",
+                "scanname": "P88882019",
+                "solidStatus": 0
+            }]
+        }, {
+            "channel": 10,
+            "scancode": "ysf",
+            "scanname": "云闪付",
+            "icon": "https://line.txwl-888.com/group1/M00/00/2F/ZxcuGF5LTpSAE8irAAAJOek1zow633.png",
+            "type": 2,
+            "paymentChannel": "12",
+            "config": [{
+                "payId": 3540,
+                "minquota": 20.0,
+                "maxquota": 5000.0,
+                "paymentName": "KC",
+                "scancode": "ysf",
+                "scanname": "P88882019",
+                "solidStatus": 0
+            }]
+        }, {
+            "channel": 7,
+            "scancode": "kj",
+            "scanname": "快捷支付",
+            "icon": "https://line.txwl-888.com/group1/M00/00/2E/DsBDFV5LTK2AeX7BAAAKhUdmA1k245.png",
+            "type": 2,
+            "paymentChannel": "9",
+            "config": [{
+                "payId": 3540,
+                "minquota": 20.0,
+                "maxquota": 5000.0,
+                "paymentName": "KC",
+                "scancode": "kj",
+                "scanname": "P88882019",
+                "solidStatus": 0
+            }]
+        }, {
+            "channel": 3,
+            "scancode": "ali",
+            "scanname": "支付宝支付",
+            "icon": "https://line.txwl-888.com/group1/M00/00/2F/ZxcuGF5Ki0aADrqAAAAJTOT7d78069.png",
+            "type": 2,
+            "paymentChannel": "4",
+            "config": [{
+                "payId": 3882,
+                "minquota": 100.0,
+                "maxquota": 10000.0,
+                "paymentName": "TAOB",
+                "scancode": "ali",
+                "scanname": "P88882019",
+                "solidStatus": 0
+            }, {
+                "payId": 3065,
+                "minquota": 800.0,
+                "maxquota": 10000.0,
+                "paymentName": "TXH",
+                "scancode": "ali",
+                "scanname": "10020",
+                "solidStatus": 0
+            }]
+        }]
+    })
+})
+
+
+router.post('/pay/online/scan', (req, res) => {
+    const {scancode, payId, amount, terminal} = req.body;
+
+    if (!scancode || !payId || !amount || !terminal) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send({
+            "status": 10000,
+            "msg": "创建支付订单成功",
+            "terminal": "0",
+            "data": {
+                "data": "https://h5.topgate.io/wgate/#/login?type=3&orderId=TC02201114212738467cR943R5s&mchId=4800",
+                "username": "linz001",
+                "orderNo": "YHHtg2020111421273833433416481",
+                "amount": amount,
+                "viewType": "link"
+            }
+        })
+    }
+})
+
+/**
+ *  channel ali yl
+ */
+router.post('/pay/offline/scan', (req, res) => {
+
+    const {scancode, payId, amount, terminal, name, channel} = req.body;
+
+    if (!scancode || !payId || !amount || !terminal || !name || !channel) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send({
+            "status": 10000,
+            "msg": "创建支付订单成功",
+            "terminal": "0",
+            "data": {
+                "data": [{"name": "银行", "value": "绵阳市商业银行"}, {
+                    "name": "账号",
+                    "value": "6223670100008727876"
+                }, {"name": "开户名", "value": "杨迅垚"}],
+                "orderNo": "YHHmafg2020111421400420620622932",
+                "amount": amount,
+                "viewType": "datamap",
+                "orderTime": "2020-11-14 21:40:04"
+            }
+        })
+    }
+})
+
 
 module.exports = router;
