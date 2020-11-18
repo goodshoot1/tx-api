@@ -2,6 +2,14 @@ var express = require('express');
 const {route} = require('.');
 var router = express.Router();
 
+
+let hasWithdrawPassword = false;
+
+let hasBankCard = false;
+
+let hasUSDT = false;
+
+
 /* GET users listing. */
 router.get('/', function (req, res, next) {
     res.send('respond with a resource');
@@ -31,8 +39,8 @@ router.get('/info', (req, res) => {
             "rmk": "",
             "unread": 0,
             "hasMobile": false,
-            "hasWithdrawPassword": false,
-            "hasBankCard": false,
+            "hasWithdrawPassword": hasWithdrawPassword,
+            "hasBankCard": hasBankCard,
             "hasJoin": 2,
             "hasAlipay": false,
             "openAlipay": true,
@@ -473,7 +481,7 @@ router.post('/pay/online/scan', (req, res) => {
 /**
  *  channel ali yl
  */
-router.post('/pay/offline/scan', (req, res) => {
+router.post('/pay/scan', (req, res) => {
 
     const {scancode, payId, amount, terminal, name, channel} = req.body;
 
@@ -499,6 +507,37 @@ router.post('/pay/offline/scan', (req, res) => {
             }
         })
     }
+})
+
+/**
+ * 修改提款密码
+ */
+router.post('/modifyPassword', (req, res) => {
+    const {password, rePassword} = req.body;
+    if (!password && !rePassword) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        hasWithdrawPassword = true;
+        res.send({"status": 10000, "msg": "设定用户提款密码成功"})
+    }
+})
+
+
+router.get('/usdt/getBaseInfo', (req, res) => {
+    res.send({
+        "status": 10000,
+        "msg": "获取数字货币基础配置 ,PayAgreementList协议,CurrencyWalletList钱包类型",
+        "data": {
+            "PayAgreementList": [{"id": 11, "payAgreement": "ERC20", "payType": 1}],
+            "CurrencyWalletList": [{"id": 15, "walletType": "火币"}, {"id": 16, "walletType": "IMtoken"}, {
+                "id": 17,
+                "walletType": "比特派"
+            }, {"id": 18, "walletType": "其他钱包"}]
+        }
+    })
 })
 
 
