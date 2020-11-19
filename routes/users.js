@@ -541,4 +541,67 @@ router.get('/usdt/getBaseInfo', (req, res) => {
 })
 
 
+router.post('game/transfer', (req, res) => {
+    const {amount, gameCode, terminal} = req.body;
+    if (!amount && !gameCode && !terminal) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send({"status": 10000, "msg": "转账成功"})
+    }
+})
+
+
+router.post('usdt/wallet', (req, res) => {
+    const {account, walletTypeId, walletAgreementId, walletAddress} = req.body;
+
+    if (!account && !walletTypeId && !walletAgreementId && !walletAddress) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send({"status": 10000, "msg": "设置成功"})
+    }
+})
+
+router.get('withdraw/config', (req, res) => {
+    res.send({
+        "status": 10000,
+        "msg": "查询平台提款配置成功",
+        "data": {
+            "cid": 18,
+            "uid": 4004592,
+            "cagent": "yhh",
+            "markingQuantity": 0.0,
+            "userQuantity": 0.0,
+            "winAmount": 0.0,
+            "userWinamount": 0.0,
+            "userQuantityHistory": 0.0,
+            "withdrawConfig": 30.0,
+            "withdrawManageFee": 0,
+            "withdrawFee": 0.0,
+            "minWithdrawMoney": 100.0,
+            "maxWithdrawMoney": 500000.0,
+            "freeWithdrawTime": 4,
+            "todaytimes": 0,
+            "totalCounts": 0,
+            "todayCounts": 0,
+            "usdtMinWithdrawMoney": 100.0,
+            "usdtMaxWithdrawMoney": 1000000.0,
+            "usdtWithdrawFee": 0.0,
+            "usdtCompulsoryWithdrawalFee": 0.0,
+            "aliMinWithdrawMoney": 100.0,
+            "aliMaxWithdrawMoney": 10000.0,
+            "aliWithdrawFee": 0.0,
+            "aliCompulsoryWithdrawalFee": 30.0,
+            "minWithdrawTime": 0,
+            "maxWithdrawTime": 24
+        }
+    })
+})
+
+
 module.exports = router;
