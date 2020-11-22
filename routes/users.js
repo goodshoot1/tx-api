@@ -455,26 +455,30 @@ router.post('/payConfig', (req, res) => {
 
 
 router.post('/pay/online/scan', (req, res) => {
-    const {scancode, payId, amount, terminal} = req.body;
+    const {scancode, payId, amount} = req.body;
 
-    if (!scancode || !payId || !amount || !terminal) {
+    if (!scancode || !payId) {
         res.send({
             msg: "参数不正确",
             status: 20000
         })
     } else {
-        res.send({
-            "status": 10000,
-            "msg": "创建支付订单成功",
-            "terminal": "0",
-            "data": {
-                "data": "https://h5.topgate.io/wgate/#/login?type=3&orderId=TC02201114212738467cR943R5s&mchId=4800",
-                "username": "linz001",
-                "orderNo": "YHHtg2020111421273833433416481",
-                "amount": amount,
-                "viewType": "link"
-            }
-        })
+
+        setTimeout(() => {
+            res.send({
+                "status": 10000,
+                "msg": "创建支付订单成功",
+                "terminal": "0",
+                "data": {
+                    "url": "https://h5.topgate.io/wgate/#/login?type=3&orderId=TC02201114212738467cR943R5s&mchId=4800",
+                    "username": "linz001",
+                    "orderNo": "YHHtg2020111421273833433416481",
+                    "amount": amount,
+                    "viewType": "link"
+                }
+            })
+        }, 3000)
+
     }
 })
 
@@ -485,7 +489,7 @@ router.post('/pay/scan', (req, res) => {
 
     const {scancode, payId, amount, terminal, name, channel} = req.body;
 
-    if (!scancode || !payId || !amount || !terminal || !name || !channel) {
+    if (!scancode || !payId) {
         res.send({
             msg: "参数不正确",
             status: 20000
@@ -526,7 +530,7 @@ router.post('/modifyPassword', (req, res) => {
 })
 
 
-router.get('/usdt/getBaseInfo', (req, res) => {
+router.get('usdt/getBaseInfo', (req, res) => {
     res.send({
         "status": 10000,
         "msg": "获取数字货币基础配置 ,PayAgreementList协议,CurrencyWalletList钱包类型",
@@ -541,20 +545,27 @@ router.get('/usdt/getBaseInfo', (req, res) => {
 })
 
 
-router.post('game/transfer', (req, res) => {
-    const {amount, gameCode, terminal} = req.body;
-    if (!amount && !gameCode && !terminal) {
+router.post('/game/transfer', (req, res) => {
+    const {amount, inValue, outValue} = req.body;
+    if (!amount && !inValue && !outValue) {
         res.send({
             msg: "参数不正确",
             status: 20000
         })
     } else {
-        res.send({"status": 10000, "msg": "转账成功"})
+        setTimeout(() => {
+            res.send({
+                "status": 10000, "msg": "转账成功", data: {
+                    wallet: 4444, totalBalance: 6666, integral: 0
+                }
+            })
+        }, 4000)
+
     }
 })
 
 
-router.post('usdt/wallet', (req, res) => {
+router.post('/usdt/wallet', (req, res) => {
     const {account, walletTypeId, walletAgreementId, walletAddress} = req.body;
 
     if (!account && !walletTypeId && !walletAgreementId && !walletAddress) {
