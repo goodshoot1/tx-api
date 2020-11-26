@@ -578,7 +578,7 @@ router.post('/usdt/wallet', (req, res) => {
     }
 })
 
-router.get('withdraw/config', (req, res) => {
+router.get('/withdraw/config', (req, res) => {
     res.send({
         "status": 10000,
         "msg": "查询平台提款配置成功",
@@ -608,6 +608,181 @@ router.get('withdraw/config', (req, res) => {
             "aliMaxWithdrawMoney": 10000.0,
             "aliWithdrawFee": 0.0,
             "aliCompulsoryWithdrawalFee": 30.0,
+            "minWithdrawTime": 0,
+            "maxWithdrawTime": 24
+        }
+    })
+})
+
+/**
+ * 修改添加提款密码
+ */
+router.post('/modify/withdrawPwd', (req, res) => {
+    const {password, rePassword} = req.body;
+    if (!password && !rePassword) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send({"status": 10000, "msg": "设定用户提款密码成功"})
+    }
+})
+
+
+/**
+ * 添加银行卡
+ */
+router.post('/addBank', (req, res) => {
+    const {cardUsername, bankId, cardNum, cardAddress, password} = req.body;
+    if (!cardUsername && !bankId && !cardNum && !cardAddress && !password) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send({"status": 10000, "msg": "添加银行卡成功"})
+    }
+})
+
+/**
+ * 获取银行卡信息
+ */
+router.get('/getBankTypes', (req, res) => {
+    res.send({
+        "status": 10000,
+        "msg": "查询成功",
+        "data": [{"bankId": 1, "bankName": "中国农业银行"}, {"bankId": 2, "bankName": "中国银行"}, {
+            "bankId": 3,
+            "bankName": "交通银行"
+        }, {"bankId": 4, "bankName": "中国建设银行"}, {"bankId": 5, "bankName": "中国工商银行"}, {
+            "bankId": 6,
+            "bankName": "中国邮政储蓄银行"
+        }, {"bankId": 7, "bankName": "招商银行"}, {"bankId": 8, "bankName": "浦发银行"}, {
+            "bankId": 9,
+            "bankName": "中国光大银行"
+        }, {"bankId": 10, "bankName": "中信银行"}, {"bankId": 11, "bankName": "平安银行"}, {
+            "bankId": 12,
+            "bankName": "中国民生银行"
+        }, {"bankId": 13, "bankName": "华夏银行"}, {"bankId": 14, "bankName": "广发银行"}, {
+            "bankId": 15,
+            "bankName": "北京银行"
+        }, {"bankId": 16, "bankName": "上海银行"}, {"bankId": 17, "bankName": "兴业银行"}, {
+            "bankId": 18,
+            "bankName": "广西农村信用社"
+        }, {"bankId": 19, "bankName": "东莞农村商业银行"}, {"bankId": 20, "bankName": "深圳发展银行"}, {
+            "bankId": 21,
+            "bankName": "广东农信"
+        }, {"bankId": 22, "bankName": "河北银行"}, {"bankId": 23, "bankName": "郑州银行 "}, {
+            "bankId": 24,
+            "bankName": "洛阳银行 "
+        }, {"bankId": 25, "bankName": "哈尔滨银行"}, {"bankId": 26, "bankName": "汉口银行"}, {
+            "bankId": 27,
+            "bankName": "长沙银行"
+        }, {"bankId": 28, "bankName": "吉林银行"}, {"bankId": 29, "bankName": "江苏银行"}, {
+            "bankId": 30,
+            "bankName": "南京银行"
+        }, {"bankId": 31, "bankName": "九江银行"}, {"bankId": 32, "bankName": "南昌银行"}, {
+            "bankId": 33,
+            "bankName": "盛京银行"
+        }, {"bankId": 34, "bankName": "营口银行"}, {"bankId": 35, "bankName": "宁夏银行"}, {
+            "bankId": 36,
+            "bankName": "内蒙古银行"
+        }, {"bankId": 37, "bankName": "青海银行"}, {"bankId": 38, "bankName": "恒丰银行"}, {
+            "bankId": 39,
+            "bankName": "烟台银行"
+        }, {"bankId": 40, "bankName": "晋商银行"}, {"bankId": 41, "bankName": "长安银行"}, {
+            "bankId": 42,
+            "bankName": "成都银行"
+        }, {"bankId": 43, "bankName": "渤海银行"}, {"bankId": 44, "bankName": "天津银行"}, {
+            "bankId": 45,
+            "bankName": "浙商银行"
+        }, {"bankId": 46, "bankName": "杭州银行"}, {"bankId": 47, "bankName": "宁波银行"}, {
+            "bankId": 48,
+            "bankName": "温州银行"
+        }, {"bankId": 49, "bankName": "厦门银行"}, {"bankId": 50, "bankName": "泉州银行"}, {
+            "bankId": 51,
+            "bankName": "兰州银行"
+        }, {"bankId": 52, "bankName": "深圳农村商业银行"}, {"bankId": 53, "bankName": "广州银行"}, {
+            "bankId": 54,
+            "bankName": "广州农村商业银行"
+        }, {"bankId": 55, "bankName": "东莞银行"}, {"bankId": 56, "bankName": "广西北部湾银行"}, {
+            "bankId": 57,
+            "bankName": "河北省农村信用社联合社"
+        }, {"bankId": 58, "bankName": "福建省农村信用社联合社"}, {"bankId": 99, "bankName": "其它银行"}]
+    })
+})
+
+
+/**
+ * 添加支付宝
+ */
+router.post('/addAlipay', (req, res) => {
+    const {aliAccount, aliUsername, password} = req.body;
+    if (!aliAccount && !aliUsername && !password) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send({"status": 10000, "msg": "添加支付宝账号成功"})
+    }
+})
+
+/**
+ * 银行卡信息
+ */
+router.get('/bankInfo', (req, res) => {
+    const {terminal} = req.query;
+    res.send({
+        "status": 10000,
+        "msg": "查询银行卡信息成功",
+        "data": {
+            "id": 53,
+            "cardUsername": "罗夏",
+            "cardNum": "3432********3453",
+            "cardAddress": "山西省阳泉市平定县山西撒旦法撒旦法",
+            "addTime": "2020-11-26 21:18:13",
+            "bankName": "招商银行",
+            "isDefault": 0
+        }
+    })
+})
+
+/**
+ * 获取提款信息
+ */
+router.get('/bankInfo', (req, res) => {
+    const {terminal} = req.query;
+    res.send({
+        "status": 10000,
+        "msg": "查询平台提款配置成功",
+        "data": {
+            "cid": 5,
+            "uid": 445,
+            "cagent": "txw",
+            "markingQuantity": 0.0,
+            "userQuantity": 0.0,
+            "winAmount": 0.0,
+            "userWinamount": 0.0,
+            "userQuantityHistory": 0.0,
+            "withdrawConfig": 8.0,
+            "withdrawManageFee": 0,
+            "withdrawFee": 5.0,
+            "minWithdrawMoney": 100.0,
+            "maxWithdrawMoney": 500001.0,
+            "freeWithdrawTime": 0,
+            "todaytimes": 0,
+            "totalCounts": 0,
+            "todayCounts": 0,
+            "usdtMinWithdrawMoney": 100.0,
+            "usdtMaxWithdrawMoney": 100.0,
+            "usdtWithdrawFee": 0.0,
+            "usdtCompulsoryWithdrawalFee": 0.0,
+            "aliMinWithdrawMoney": 100.0,
+            "aliMaxWithdrawMoney": 100.0,
+            "aliWithdrawFee": 5.0,
+            "aliCompulsoryWithdrawalFee": 8.0,
             "minWithdrawTime": 0,
             "maxWithdrawTime": 24
         }
