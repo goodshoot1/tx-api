@@ -1,5 +1,5 @@
 module.exports = {
-    mg: {
+    nmg: {
         "status": 10000, "msg": "查询成功", "data": [{
             "id": 420803,
             "parentId": 420802,

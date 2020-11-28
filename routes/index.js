@@ -4728,7 +4728,7 @@ router.get('/api/game/list', ((req, res) => {
         })
     } else {
 
-        const data = gameData[gameType].data[0].subMenus;
+        const data = gameData[gameType.toLowerCase()].data[0].subMenus;
         res.send(
             {
                 "total": data.length,
