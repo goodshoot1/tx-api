@@ -1,5 +1,5 @@
 var express = require('express');
-const { route } = require('.');
+const {route} = require('.');
 var router = express.Router();
 
 
@@ -52,15 +52,15 @@ router.get('/info', (req, res) => {
 
 router.get('/config', (req, res) => {
     console.log(' req.query', req.query)
-    const { terminal } = req.query;
+    const {terminal} = req.query;
 
-    if (!terminal) {
-        res.send({
-            msg: "参数不正确",
-            status: 20000
-        })
-        return;
-    }
+    // if (!terminal) {
+    //     res.send({
+    //         msg: "参数不正确",
+    //         status: 20000
+    //     })
+    //     return;
+    // }
 
     res.send(
         {
@@ -288,7 +288,7 @@ router.post('/batch', (req, res) => {
 })
 
 router.post('/register', (req, res) => {
-    const { username, password, phoneNumber, wechat, commend } = req.body;
+    const {username, password, phoneNumber, wechat, commend} = req.body;
     if (!username || !password || !phoneNumber || !wechat) {
         res.send({
             msg: "参数不正确",
@@ -320,7 +320,7 @@ router.post('/register', (req, res) => {
  * 回收金额
  */
 router.post('/recycle', (req, res) => {
-    res.send({ "status": 10000, "msg": "回收游戏余额成功", "data": { "wallet": 0.0, "balance": 0.0 } })
+    res.send({"status": 10000, "msg": "回收游戏余额成功", "data": {"wallet": 0.0, "balance": 0.0}})
 })
 
 
@@ -343,7 +343,7 @@ router.post('/payConfig', (req, res) => {
                 "scancode": "card",
                 "scanname": "VIP转账",
                 "solidStatus": 0,
-                "channels": [{ "code": "ali", "desc": "支付宝转账" }, { "code": "yl", "desc": "银联转账" }]
+                "channels": [{"code": "ali", "desc": "支付宝转账"}, {"code": "yl", "desc": "银联转账"}]
             }]
         }, {
             "channel": 14,
@@ -455,7 +455,7 @@ router.post('/payConfig', (req, res) => {
 
 
 router.post('/pay/online/scan', (req, res) => {
-    const { scancode, payId, amount } = req.body;
+    const {scancode, payId, amount} = req.body;
 
     if (!scancode || !payId) {
         res.send({
@@ -487,7 +487,7 @@ router.post('/pay/online/scan', (req, res) => {
  */
 router.post('/pay/scan', (req, res) => {
 
-    const { username, cardType, amount } = req.body;
+    const {username, cardType, amount} = req.body;
 
     if (!username || !cardType || !amount) {
         res.send({
@@ -501,10 +501,10 @@ router.post('/pay/scan', (req, res) => {
             "terminal": "0",
             "data": {
                 "data":
-                    [{ "name": "银行", "value": "绵阳市商业银行" }, {
+                    [{"name": "银行", "value": "绵阳市商业银行"}, {
                         "name": "账号",
                         "value": "6223670100008727876"
-                    }, { "name": "开户名", "value": "杨迅垚" }],
+                    }, {"name": "开户名", "value": "杨迅垚"}],
                 "orderNo": "YHHmafg2020111421400420620622932",
                 "amount": amount,
                 "viewType": "datamap",
@@ -518,7 +518,7 @@ router.post('/pay/scan', (req, res) => {
  * 修改提款密码
  */
 router.post('/modifyPassword', (req, res) => {
-    const { password, rePassword } = req.body;
+    const {password, rePassword} = req.body;
     if (!password && !rePassword) {
         res.send({
             msg: "参数不正确",
@@ -526,7 +526,7 @@ router.post('/modifyPassword', (req, res) => {
         })
     } else {
         hasWithdrawPassword = true;
-        res.send({ "status": 10000, "msg": "设定用户提款密码成功" })
+        res.send({"status": 10000, "msg": "设定用户提款密码成功"})
     }
 })
 
@@ -536,18 +536,18 @@ router.get('usdt/getBaseInfo', (req, res) => {
         "status": 10000,
         "msg": "获取数字货币基础配置 ,PayAgreementList协议,CurrencyWalletList钱包类型",
         "data": {
-            "PayAgreementList": [{ "id": 11, "payAgreement": "ERC20", "payType": 1 }],
-            "CurrencyWalletList": [{ "id": 15, "walletType": "火币" }, { "id": 16, "walletType": "IMtoken" }, {
+            "PayAgreementList": [{"id": 11, "payAgreement": "ERC20", "payType": 1}],
+            "CurrencyWalletList": [{"id": 15, "walletType": "火币"}, {"id": 16, "walletType": "IMtoken"}, {
                 "id": 17,
                 "walletType": "比特派"
-            }, { "id": 18, "walletType": "其他钱包" }]
+            }, {"id": 18, "walletType": "其他钱包"}]
         }
     })
 })
 
 
 router.post('/game/transfer', (req, res) => {
-    const { amount, inValue, outValue } = req.body;
+    const {amount, inValue, outValue} = req.body;
     if (!amount && !inValue && !outValue) {
         res.send({
             msg: "参数不正确",
@@ -567,7 +567,7 @@ router.post('/game/transfer', (req, res) => {
 
 
 router.post('/usdt/wallet', (req, res) => {
-    const { account, walletTypeId, walletAgreementId, walletAddress } = req.body;
+    const {account, walletTypeId, walletAgreementId, walletAddress} = req.body;
 
     if (!account && !walletTypeId && !walletAgreementId && !walletAddress) {
         res.send({
@@ -575,7 +575,7 @@ router.post('/usdt/wallet', (req, res) => {
             status: 20000
         })
     } else {
-        res.send({ "status": 10000, "msg": "设置成功" })
+        res.send({"status": 10000, "msg": "设置成功"})
     }
 })
 
@@ -619,14 +619,14 @@ router.get('/withdraw/config', (req, res) => {
  * 修改添加提款密码
  */
 router.post('/modify/withdrawPwd', (req, res) => {
-    const { password, rePassword } = req.body;
+    const {password, rePassword} = req.body;
     if (!password && !rePassword) {
         res.send({
             msg: "参数不正确",
             status: 20000
         })
     } else {
-        res.send({ "status": 10000, "msg": "设定用户提款密码成功" })
+        res.send({"status": 10000, "msg": "设定用户提款密码成功"})
     }
 })
 
@@ -635,14 +635,14 @@ router.post('/modify/withdrawPwd', (req, res) => {
  * 添加银行卡
  */
 router.post('/addBank', (req, res) => {
-    const { cardUsername, bankId, cardNum, cardAddress, password } = req.body;
+    const {cardUsername, bankId, cardNum, cardAddress, password} = req.body;
     if (!cardUsername && !bankId && !cardNum && !cardAddress && !password) {
         res.send({
             msg: "参数不正确",
             status: 20000
         })
     } else {
-        res.send({ "status": 10000, "msg": "添加银行卡成功" })
+        res.send({"status": 10000, "msg": "添加银行卡成功"})
     }
 })
 
@@ -653,64 +653,64 @@ router.get('/getBankTypes', (req, res) => {
     res.send({
         "status": 10000,
         "msg": "查询成功",
-        "data": [{ "bankId": 1, "bankName": "中国农业银行" }, { "bankId": 2, "bankName": "中国银行" }, {
+        "data": [{"bankId": 1, "bankName": "中国农业银行"}, {"bankId": 2, "bankName": "中国银行"}, {
             "bankId": 3,
             "bankName": "交通银行"
-        }, { "bankId": 4, "bankName": "中国建设银行" }, { "bankId": 5, "bankName": "中国工商银行" }, {
+        }, {"bankId": 4, "bankName": "中国建设银行"}, {"bankId": 5, "bankName": "中国工商银行"}, {
             "bankId": 6,
             "bankName": "中国邮政储蓄银行"
-        }, { "bankId": 7, "bankName": "招商银行" }, { "bankId": 8, "bankName": "浦发银行" }, {
+        }, {"bankId": 7, "bankName": "招商银行"}, {"bankId": 8, "bankName": "浦发银行"}, {
             "bankId": 9,
             "bankName": "中国光大银行"
-        }, { "bankId": 10, "bankName": "中信银行" }, { "bankId": 11, "bankName": "平安银行" }, {
+        }, {"bankId": 10, "bankName": "中信银行"}, {"bankId": 11, "bankName": "平安银行"}, {
             "bankId": 12,
             "bankName": "中国民生银行"
-        }, { "bankId": 13, "bankName": "华夏银行" }, { "bankId": 14, "bankName": "广发银行" }, {
+        }, {"bankId": 13, "bankName": "华夏银行"}, {"bankId": 14, "bankName": "广发银行"}, {
             "bankId": 15,
             "bankName": "北京银行"
-        }, { "bankId": 16, "bankName": "上海银行" }, { "bankId": 17, "bankName": "兴业银行" }, {
+        }, {"bankId": 16, "bankName": "上海银行"}, {"bankId": 17, "bankName": "兴业银行"}, {
             "bankId": 18,
             "bankName": "广西农村信用社"
-        }, { "bankId": 19, "bankName": "东莞农村商业银行" }, { "bankId": 20, "bankName": "深圳发展银行" }, {
+        }, {"bankId": 19, "bankName": "东莞农村商业银行"}, {"bankId": 20, "bankName": "深圳发展银行"}, {
             "bankId": 21,
             "bankName": "广东农信"
-        }, { "bankId": 22, "bankName": "河北银行" }, { "bankId": 23, "bankName": "郑州银行 " }, {
+        }, {"bankId": 22, "bankName": "河北银行"}, {"bankId": 23, "bankName": "郑州银行 "}, {
             "bankId": 24,
             "bankName": "洛阳银行 "
-        }, { "bankId": 25, "bankName": "哈尔滨银行" }, { "bankId": 26, "bankName": "汉口银行" }, {
+        }, {"bankId": 25, "bankName": "哈尔滨银行"}, {"bankId": 26, "bankName": "汉口银行"}, {
             "bankId": 27,
             "bankName": "长沙银行"
-        }, { "bankId": 28, "bankName": "吉林银行" }, { "bankId": 29, "bankName": "江苏银行" }, {
+        }, {"bankId": 28, "bankName": "吉林银行"}, {"bankId": 29, "bankName": "江苏银行"}, {
             "bankId": 30,
             "bankName": "南京银行"
-        }, { "bankId": 31, "bankName": "九江银行" }, { "bankId": 32, "bankName": "南昌银行" }, {
+        }, {"bankId": 31, "bankName": "九江银行"}, {"bankId": 32, "bankName": "南昌银行"}, {
             "bankId": 33,
             "bankName": "盛京银行"
-        }, { "bankId": 34, "bankName": "营口银行" }, { "bankId": 35, "bankName": "宁夏银行" }, {
+        }, {"bankId": 34, "bankName": "营口银行"}, {"bankId": 35, "bankName": "宁夏银行"}, {
             "bankId": 36,
             "bankName": "内蒙古银行"
-        }, { "bankId": 37, "bankName": "青海银行" }, { "bankId": 38, "bankName": "恒丰银行" }, {
+        }, {"bankId": 37, "bankName": "青海银行"}, {"bankId": 38, "bankName": "恒丰银行"}, {
             "bankId": 39,
             "bankName": "烟台银行"
-        }, { "bankId": 40, "bankName": "晋商银行" }, { "bankId": 41, "bankName": "长安银行" }, {
+        }, {"bankId": 40, "bankName": "晋商银行"}, {"bankId": 41, "bankName": "长安银行"}, {
             "bankId": 42,
             "bankName": "成都银行"
-        }, { "bankId": 43, "bankName": "渤海银行" }, { "bankId": 44, "bankName": "天津银行" }, {
+        }, {"bankId": 43, "bankName": "渤海银行"}, {"bankId": 44, "bankName": "天津银行"}, {
             "bankId": 45,
             "bankName": "浙商银行"
-        }, { "bankId": 46, "bankName": "杭州银行" }, { "bankId": 47, "bankName": "宁波银行" }, {
+        }, {"bankId": 46, "bankName": "杭州银行"}, {"bankId": 47, "bankName": "宁波银行"}, {
             "bankId": 48,
             "bankName": "温州银行"
-        }, { "bankId": 49, "bankName": "厦门银行" }, { "bankId": 50, "bankName": "泉州银行" }, {
+        }, {"bankId": 49, "bankName": "厦门银行"}, {"bankId": 50, "bankName": "泉州银行"}, {
             "bankId": 51,
             "bankName": "兰州银行"
-        }, { "bankId": 52, "bankName": "深圳农村商业银行" }, { "bankId": 53, "bankName": "广州银行" }, {
+        }, {"bankId": 52, "bankName": "深圳农村商业银行"}, {"bankId": 53, "bankName": "广州银行"}, {
             "bankId": 54,
             "bankName": "广州农村商业银行"
-        }, { "bankId": 55, "bankName": "东莞银行" }, { "bankId": 56, "bankName": "广西北部湾银行" }, {
+        }, {"bankId": 55, "bankName": "东莞银行"}, {"bankId": 56, "bankName": "广西北部湾银行"}, {
             "bankId": 57,
             "bankName": "河北省农村信用社联合社"
-        }, { "bankId": 58, "bankName": "福建省农村信用社联合社" }, { "bankId": 99, "bankName": "其它银行" }]
+        }, {"bankId": 58, "bankName": "福建省农村信用社联合社"}, {"bankId": 99, "bankName": "其它银行"}]
     })
 })
 
@@ -719,42 +719,78 @@ router.get('/getBankTypes', (req, res) => {
  * 添加支付宝
  */
 router.post('/addAlipay', (req, res) => {
-    const { aliAccount, aliUsername, password } = req.body;
+    const {aliAccount, aliUsername, password} = req.body;
     if (!aliAccount && !aliUsername && !password) {
         res.send({
             msg: "参数不正确",
             status: 20000
         })
     } else {
-        res.send({ "status": 10000, "msg": "添加支付宝账号成功" })
+        res.send({"status": 10000, "msg": "添加支付宝账号成功"})
     }
 })
+
+/**
+ * 支付宝信息
+ */
+router.get('/alipayInfo', (req, res) => {
+    res.send({
+        "status": 10000,
+        "msg": "查询支付宝信息成功",
+        "data": {"id": 12, "uid": 451, "aliUsername": "你好", "aliAccount": "3****43@qq.com"}
+    })
+})
+
 
 /**
  * 银行卡信息
  */
 router.get('/bankInfo', (req, res) => {
-    const { terminal } = req.query;
+    const {terminal} = req.query;
     res.send({
         "status": 10000,
         "msg": "查询银行卡信息成功",
-        "data": {
+        "data": [{
+            "id": 55,
+            "cardUsername": "罗夏",
+            "cardNum": "9889********9889",
+            "cardAddress": "北京市市辖区西城区交通银行",
+            "addTime": "2020-11-28 18:00:18",
+            "bankName": "交通银行",
+            "isDefault": 0
+        }, {
             "id": 53,
             "cardUsername": "罗夏",
             "cardNum": "3432********3453",
             "cardAddress": "山西省阳泉市平定县山西撒旦法撒旦法",
             "addTime": "2020-11-26 21:18:13",
             "bankName": "招商银行",
-            "isDefault": 0
-        }
+            "isDefault": 1
+        }, {
+            "id": 54,
+            "cardUsername": "罗夏",
+            "cardNum": "5566********6545",
+            "cardAddress": "天津市市辖区和平区中国银行",
+            "addTime": "2020-11-28 17:51:59",
+            "bankName": "中国银行",
+            "isDefault": 1
+        }, {
+            "id": 56,
+            "cardUsername": "罗夏",
+            "cardNum": "5345********3490",
+            "cardAddress": "河北省秦皇岛市青龙满族自治县建设银行",
+            "addTime": "2020-11-29 14:52:38",
+            "bankName": "中国建设银行",
+            "isDefault": 1
+        }]
     })
 })
 
 /**
  * 获取提款信息
  */
-router.get('/bankInfo', (req, res) => {
-    const { terminal } = req.query;
+router.get('/withDrawConfig', (req, res) => {
+    const {terminal} = req.query;
     res.send({
         "status": 10000,
         "msg": "查询平台提款配置成功",
@@ -788,6 +824,22 @@ router.get('/bankInfo', (req, res) => {
             "maxWithdrawTime": 24
         }
     })
+})
+
+/**
+ * 添加银行卡
+ */
+router.post('/addBankCard', (req, res) => {
+    const {cardUsername, bankId, cardNum, cardAddress, password} = req.body;
+    if (!cardUsername && !bankId && !cardNum && !cardAddress && !password) {
+        res.send({
+            msg: "参数不正确",
+            status: 20000
+        })
+    } else {
+        res.send({"status": 10000, "msg": "添加银行卡成功"})
+    }
+
 })
 
 
