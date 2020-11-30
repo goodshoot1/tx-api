@@ -760,7 +760,7 @@ router.get('/bankInfo', (req, res) => {
             "isDefault": 0
         }, {
             "id": 53,
-            "cardUsername": "罗夏",
+            "cardUsername": "王五",
             "cardNum": "3432********3453",
             "cardAddress": "山西省阳泉市平定县山西撒旦法撒旦法",
             "addTime": "2020-11-26 21:18:13",
@@ -768,7 +768,7 @@ router.get('/bankInfo', (req, res) => {
             "isDefault": 1
         }, {
             "id": 54,
-            "cardUsername": "罗夏",
+            "cardUsername": "张三",
             "cardNum": "5566********6545",
             "cardAddress": "天津市市辖区和平区中国银行",
             "addTime": "2020-11-28 17:51:59",
@@ -776,7 +776,7 @@ router.get('/bankInfo', (req, res) => {
             "isDefault": 1
         }, {
             "id": 56,
-            "cardUsername": "罗夏",
+            "cardUsername": "雾凇",
             "cardNum": "5345********3490",
             "cardAddress": "河北省秦皇岛市青龙满族自治县建设银行",
             "addTime": "2020-11-29 14:52:38",
